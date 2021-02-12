@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Проект</title>
+  </head>
+  <body>
+    <div class="row">
+	    <div class="col-6 col-md-4"></div>
+	    <div class="col-6 col-md-4" style="margin-top: 10%; background-color: grey; border: 1px solid black; border-radius: 5px; padding: 20px;">
+	    	<form id='hove'>
+	    		<INPUT id="uniqueID" SIZE=20>
+                <INPUT TYPE="button" VALUE="Готово" onclick="looool()">
+
+	    	</form>
+	    	<img hidden id="rere">
+	    	<form hidden id='rere2'>
+    			<INPUT TYPE="reset" VALUE="Сброс" onclick="tuyo()">
+	    	</form>
+	    </div>
+	    <div class="col-6 col-md-4"></div>
+  	</div>
+  	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+  		function looool(){
+			var code = document.getElementById("uniqueID").value;
+			document.getElementById("uniqueID").value = "";
+			document.getElementById('rere').src = "http://api.screenshotlayer.com/api/capture?access_key=593d96aca8cfb2ea89458130d3904b61&url="+code+"&viewport=1440x900&width=400";
+			document.getElementById('hove').hidden = true;
+			document.getElementById('rere').hidden = false;
+			document.getElementById('rere2').hidden = false;
+  		}
+  		function tuyo(){
+  			document.getElementById('rere').hidden = true;
+			document.getElementById('rere2').hidden = true;
+			document.getElementById('hove').hidden = false;
+			document.getElementById('rere').src ="";
+  		}
+    </script>
+  </body>
+</html>
